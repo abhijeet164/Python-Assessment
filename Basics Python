@@ -1,0 +1,62 @@
+Q1.1>>>Write a Python program to swap the values of two variables  using a
+temporary variable.
+
+Soln>>>
+x = 10 
+y = 20
+
+print("Values before Swapping",x,y)
+
+temp = x 
+print("Value of temp",temp)
+
+x = y 
+print("Value of x,y before Swapping",x,y)
+
+y = temp
+print(x,y)
+
+#########################################################
+Q1.b>>>Write a Python program to swap the values of two variables without using a
+temporary variable
+
+x = 12
+y = 10
+
+print(x,y) # Before Swapping 
+
+x,y = y,x 
+print(x,y) # After Swapping
+
+Q2>>Create a function to check if a given number is prime.
+
+
+num = int(input("Enter a Number To check : "))
+    
+def check(num):
+     if num == 1:
+        print("Not Prime")
+     if num > 1 :
+        for i in range(2,num):
+            if num % i == 0:
+                print("Number is not prime")
+                break
+        else:
+            print("Number Is prime")    
+        
+check(num)  
+
+####################    
+
+Q3>>>Write a program to find the factorial of a number using recursion.
+# Recursion = A function Calling itself 1) Base Conditiomnh and Recursive Condition
+
+def factorial(n):
+   if n==0 or n==1:
+        return 1
+   else :
+    return n* factorial(n-1)
+
+n = int(input("Enter a Number")) 
+result=factorial(n)
+print(result)    
