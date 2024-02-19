@@ -59,4 +59,62 @@ def factorial(n):
 
 n = int(input("Enter a Number")) 
 result=factorial(n)
-print(result)    
+print(result) 
+
+################### 
+
+Q4>>>Implement a Python program to check if a string is a palindrome.
+
+str1 = input("Enter a String")
+
+str2 = str1[-1::-1]
+
+if str1 == str2 :
+ print("Given String is Planidrom")
+else :
+ print("Given String is not a Planidrom")   
+ 
+ 
+ ########################
+ 
+Q5>>>Create a function to calculate the sum of digits in each number.
+
+def sum_of_no(num):
+ sum = 0
+ while (num > 0):
+  sum =sum+num%10
+  num = num//10
+ return sum
+ 
+num = int(input("Enter a number"))
+
+z=sum_of_no(num)
+
+print(z)
+
+################
+
+Q5b>>> WAP to calculate the sum of digits in each number.
+
+i = int(input("Enter a Number"))
+sum = 0
+while (i > 0):
+ sum = sum +i%10
+ i = i//10
+print("Sum of given Number is = ",sum)
+
+
+##############
+
+Q6>>>Python script to generate Fibonacci series up to n.
+
+n = int(input("Enter Number"))
+
+x = 0
+y = 1
+z = 0
+while z <= n :
+ print(z)
+ x = y
+ y = z
+ z = x+y
