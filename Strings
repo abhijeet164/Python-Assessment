@@ -1,0 +1,112 @@
+#Write a python function to count the occurrences of each character in a string.
+
+str = input("Enter a String")
+print(str)
+
+l =list(str)
+
+freq =[l.count(ele) for ele in l]
+d = dict(zip(l,freq))
+print(d)
+
+####################################
+#Implement a program to check if two strings are anagrams.
+
+
+s1= input("Enter first string:")
+s2= input("Enter second string:")
+if(sorted(s1)==sorted(s2)):
+      print(" strings is anagrams.")
+else:
+      print("strings isnt anagrams.")
+
+#############################################
+
+#Create a Python script to find the longest common prefix in a list of strings
+def longestCommonPrefix(my_str):
+    if my_str == []:
+        return ''
+    if len(my_str) == 1:
+        return my_str[0]
+    my_str.sort()
+    shortest = my_str[0]
+    prefix = ''
+    for i in range(len(shortest)):
+        if my_str[len(my_str) - 1][i] == shortest[i]:
+            prefix += my_str[len(my_str) - 1][i]
+        else:
+            break
+    return prefix
+
+my_list_1 = ['car', 'carbon', 'vehicle']
+my_list_2 = ['car', 'carbon', 'carbonmonoxide']
+
+# this will give an emptry string
+print(longestCommonPrefix(my_list_1))
+# this will return the string 'car'
+print(longestCommonPrefix(my_list_2
+
+##########################################################
+
+#Write a function to reverse words in each sentence
+
+str1 = input("Enter a string  : ")
+words = str1.split()
+rev_str1 = []
+for i in words :
+  rev_str1.append(i[::-1])
+  
+print(rev_str1)  
+
+sen = " ".join(rev_str1)
+
+print(sen)
+
+
+
+#########################################################
+
+# Implement a program to count the number of vowels and consonants in a string.
+a = input("Enter a String")
+vowels = 0
+cons = 0
+for i in range(0,len(a)):
+    if(a[i] !=" "):
+        if (a[i] == 'a' or a[i] == 'e' or a[i] == 'i' or a[i] == 'o'
+            or a[i] == 'u'or a[i] == 'A'or a[i] == 'E'or a[i] == 'O'
+            or a[i] == 'U'):
+                vowels =vowels + 1
+        else:
+            cons = cons+1
+ 
+print("Total No Of Vowels",vowels)
+print("Total No Of consonant",cons)
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
