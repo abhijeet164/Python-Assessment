@@ -118,3 +118,115 @@ while z <= n :
  x = y
  y = z
  z = x+y
+
+#######################
+
+Q7>>>program to find the largest element in a list
+
+n = int(input("Enter Total Number element Wanted in list"))
+
+l = []
+
+for i in range(n):
+    ele = int(input("Enter the element"))
+    l.append(ele)
+print("myList",l)    
+sorted_list = l.sort()
+print("Sorted list",l)
+
+smallest_element = l[0]
+print("smallest_element in List is : =",smallest_element)
+
+largest_element = l[-1]
+print("largest_element in List is : =",largest_element)
+
+second_largest_element = l[-2]
+print("second_largest_element in List is : =",second_largest_element)
+
+
+# Appraroach 2 By Using inbuilt methods
+print("largest_element in List is : =",max(l))
+print("smallest_element in List is : =",min(l))
+
+
+#########################
+Q8>>>Create a function to reverse a string without using slicing or reverse functions
+
+n = "Welcome"
+
+def string_rev(n):
+    str =""
+    for i in n :
+        str = i+str
+    print(str)
+print("\n")
+
+string_rev(n)    
+
+################################
+
+Q8.b>>Create a function to reverse a string without using slicing or reverse functions
+
+# Using for loop 
+
+str_A = input("Enter a String : ")
+
+str_R = ""
+
+for i in range(len(str_A)-1,-1,-1):
+    str_R = str_R + str_A[i]
+
+print(str_R)  
+
+################################
+
+Q9>>Write a program to find the intersection of two lists
+
+
+list1 = [11,23,45,56,78,89,98]
+list2 = [12,23,35,56,78,11,99]
+
+intersection_list =[]
+
+for i in list1 :
+    if (i in list2):
+        intersection_list.append(i)
+
+print(intersection_list)        
+
+###################################
+
+Q10>>Implement a function to remove duplicate elements from a list
+
+n = int(input("Enter no of elements you want to enter"))
+
+l =[]
+for i in range(n):
+    ele = input("Enter Elements")
+    l.append(ele)
+print("myList",l)
+non_duplicte_values = set(l) 
+print(non_duplicte_values)\
+
+############
+
+Q10.b>>>Implement a function to remove duplicate elements from a list
+
+
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+b = set()
+unique = []
+for x in a:
+    if x not in b:
+        unique.append(x)
+        b.add(x)
+print("Non-duplicate items:")
+print(unique)
+
+
+
+
