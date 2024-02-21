@@ -1,0 +1,104 @@
+#Write a function to merge two dictionaries.
+
+def mergdict(dictA,dictB):
+    dict_merged = dictA.copy()
+    dict_merged.update(dictB)
+    return dict_merged
+
+
+
+
+
+dictA ={'place':'Jhon','hight':24,'idno':48}
+dictB={'name':'Smit','Age':28,'rollno':49,'phone':789}
+
+result = mergdict(dictA,dictB)
+print(result)
+
+############################
+#Write a function to merge two dictionaries.
+
+def mergdict(dictA,dictB):
+    dict_merged ={**dictA,**dictB}
+    return dict_merged
+
+
+
+
+
+dictA ={'name':'Jhon','Age':24,'rollno':48}
+dictB={'name':'Smit','Age':28,'rollno':49,'phone':789}
+
+result = mergdict(dictA,dictB)
+print(result)
+########################
+
+#Implement a program to sort a dictionary by values.
+
+marks = {'jhon':56, 'smith':45, 'alex':23}
+
+sorted_values = sorted(marks.items(),key = lambda x : x[1])
+print(sorted_values)
+
+v = sorted(marks.values()) # Only values 
+print(v)
+##########################
+def sort_dict_by_values(input_dict):
+    """
+    Sort a dictionary by values.
+
+    Parameters:
+    - input_dict: The dictionary to be sorted.
+
+    Returns:
+    A new dictionary sorted by values.
+    """
+    sorted_dict = dict(sorted(input_dict.items(), key=lambda item: item[1]))
+    return sorted_dict
+
+# Example usage:
+my_dict = {'apple': 5, 'banana': 2, 'orange': 8, 'grape': 3}
+
+sorted_result = sort_dict_by_values(my_dict)
+print(sorted_result)
+
+
+############################
+
+# Create a Python script to find the frequency of each word in each text.
+
+file_discripter = open('C:/Python Assesment/Dictionary/Count.txt','r')
+file_data = file_discripter.read()
+file_discripter.close()
+
+print(file_data)
+
+special_chatr = "?,.!"
+for schar in special_chatr :
+    if schar in file_data:
+        file_data = file_data.replace(schar,"")
+        
+        
+word_list = file_data.split()
+word_count = {}
+
+for word in word_list :
+    if word in word_count:
+        word_count[word] =+ 1
+    else:
+        word_count[word ] = 1
+        
+for key,value in word_count.items():
+    print(f"{key} occurs: {value}")    
+#######################
+d = {1:20, 2:20, 3:30, 4:40 ,5:50, 6:60}
+
+def is_key_present(x):
+    if x in d :
+        print(x,"Key is Prenset in d")
+    else:
+        print(x,"Key is Notprenset in d")    
+        
+is_key_present(6)
+is_key_present(9)
+#########################################
