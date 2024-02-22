@@ -1,0 +1,97 @@
+#. Write a function to find the maximum and minimum elements in a tuple
+def find_max_min_elements(input_tuple):
+    if not input_tuple:
+        return None, None  # Return None for both max and min if the tuple is empty
+
+    max_element = min_element = input_tuple[0]
+
+    for element in input_tuple:
+        if element > max_element:
+            max_element = element
+        elif element < min_element:
+            min_element = element
+
+    return max_element, min_element
+
+# Example usage:
+my_tuple = (5, 2, 9, 1, 7)
+max_value, min_value = find_max_min_elements(my_tuple)
+
+print("Maximum element:", max_value)
+print("Minimum element:", min_value)
+
+
+#########################
+
+def calculate_product(tuple_values):
+    result = 1
+    for element in tuple_values:
+        result *= element
+    return result
+
+# Example usage:
+my_tuple = (2, 3, 4, 5)
+product = calculate_product(my_tuple)
+
+print(f"The product of elements in the tuple {my_tuple} is: {product}")
+
+
+###############################
+
+
+#Create a Python script to concatenate two tuples.
+
+def concatenate_tuples(tuple1, tuple2):
+    concatenated_tuple = tuple1 + tuple2
+    return concatenated_tuple
+
+# Example tuples
+tuple_a = (1, 2, 3)
+tuple_b = ('a', 'b', 'c')
+
+# Concatenate tuples
+result = concatenate_tuples(tuple_a, tuple_b)
+
+# Print the result
+print("Tuple A:", tuple_a)
+print("Tuple B:", tuple_b)
+print("Concatenated Tuple:", result)
+
+
+##########################
+#Write a function to convert a list to a tuple.
+
+def list_to_tuple(input_list):
+    converted_tuple = tuple(input_list)
+    return converted_tuple
+
+# Example list
+my_list = [1, 2, 3, 4, 5]
+
+# Convert the list to a tuple
+result_tuple = list_to_tuple(my_list)
+
+# Print the result
+print("Original List:", my_list)
+print("Converted Tuple:", result_tuple)
+
+#######################################
+
+
+#Implement a program to find the index of a given element in a tuple.
+
+
+def find_index(element, my_tuple):
+    try:
+        index = my_tuple.index(element)
+        return index
+    except ValueError:
+        return f"Element '{element}' not found in the tuple."
+
+# Example usage:
+my_tuple = (1, 2, 3, 4, 5)
+element_to_find = 3
+
+result = find_index(element_to_find, my_tuple)
+print(result)
+
