@@ -1,1 +1,197 @@
+#Write a python  function to find the intersection of two sets.
+
+def find_intersection(set1, set2):
+    return set1.intersection(set2)
+    
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 5, 6, 7}
+result = find_intersection(set1, set2)
+print(result)
+####################
+
+#Write a python  function to find the intersection of two sets  with out using inbuilt function.
+
+def find_intersection(set1, set2):
+    
+    intersection_set = set()
+
+    for element in set1:
+        if element in set2:
+            intersection_set.add(element)
+
+    return intersection_set
+
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 5, 6, 7}
+result = find_intersection(set1, set2)
+print(result)
+###############################
+def is_subset(set1, set2):
+   return set1 <= set2
+
+# Example usage:
+set1 = {1, 2, 3}
+set2 = {1, 2, 3, 4, 5}
+result = is_subset(set1, set2)
+print(result)
+#####################################
+# Implement a program to check if one set is a subset of another without using standar function
+
+
+def is_subset_custom(set1, set2):
+   
+    for element in set1:
+        if element not in set2:
+            return False
+
+    return True
+
+
+set1 = {1, 2, 3}
+set2 = {1, 2, 3, 4, 5}
+result = is_subset_custom(set1, set2)
+print(result)
+
+#######################################
+
+#Create a python function to remove duplicate elements from a list and convert it to a set
+
+def remove_duplicates_and_convert_to_set(input_list):
+    """
+    Remove duplicate elements from a list and convert it to a set.
+
+    Parameters:
+    - input_list: The input list with duplicate elements.
+
+    Returns:
+    A set containing unique elements from the input list.
+    """
+    unique_set = set()
+    seen_elements = set()
+
+    for element in input_list:
+        if element not in seen_elements:
+            seen_elements.add(element)
+            unique_set.add(element)
+
+    return unique_set
+
+# Example usage:
+input_list = [1, 2, 2, 3, 4, 4, 5]
+result_set = remove_duplicates_and_convert_to_set(input_list)
+print(result_set)
+############################################
+
+input_list = [1, 2, 2, 3, 4, 4, 5]
+
+result =[]
+converted_Set = set()
+for i in input_list:
+    if i not in result:
+        result.append(i)
+        converted_Set.add(i)
+        
+        
+print(result)
+print(converted_Set)
+print(type(result))        
+#########################
+"""Write a Python script to 
+perform set operations (union, intersection, difference) on
+two sets"""
+
+A = {1,2,3,5,6}
+B = {3,4,5,6,7,8,9}
+
+union = A | B 
+inter = A & B 
+diffrernce = A - B 
+symetric = A ^ B 
+
+print(union) #{1, 2, 3, 4, 5, 6, 7, 8, 9}
+print(inter) #{3, 5, 6}
+print(diffrernce) # {1, 2}
+print(symetric) # {1, 2, 4, 7, 8, 9}
+
+####################################
+
+
+"""Write a Python script to 
+perform set operations (union, intersection, difference) on
+two sets"""
+
+
+
+def set_operations(set1, set2):
+    """
+    Perform set operations (union, intersection, difference) on two sets.
+
+    Parameters:
+    - set1: The first set.
+    - set2: The second set.
+
+    Returns:
+    A tuple containing the results of union, intersection, and difference operations.
+    """
+    union_result = set1.union(set2)
+    intersection_result = set1.intersection(set2)
+    difference_result = set1.difference(set2)
+
+    return union_result, intersection_result, difference_result
+
+# Example usage:
+set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 5, 6, 7}
+union_result, intersection_result, difference_result = set_operations(set1, set2)
+
+print("Union:", union_result)
+print("Intersection:", intersection_result)
+print("Difference (set1 - set2):", difference_result)
+############################
+
+
+#Implement a program to check if two sets are disjoint
+def set_operations(set1, set2):
+    """
+    Perform set operations (union, intersection, difference) on two sets.
+
+    Parameters:
+    - set1: The first set.
+    - set2: The second set.
+
+    Returns:
+    A tuple containing the results of union, intersection, and difference operations.
+    """
+    union_result = set1.union(set2)
+    intersection_result = set1.intersection(set2)
+    difference_result = set1.difference(set2)
+
+    return union_result, intersection_result, difference_result
+
+# Example usage:
+set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 5, 6, 7}
+union_result, intersection_result, difference_result = set_operations(set1, set2)
+
+print("Union:", union_result)
+print("Intersection:", intersection_result)
+print("Difference (set1 - set2):", difference_result)
+
+#############################################################
+
+#Implement a program to check if two sets are disjoint
+
+A = {1,2,3,5,6}
+B = {3,4,5,6,7,8,9}
+c = {7,8,9,10}
+
+print(A.isdisjoint(B))
+print(A.isdisjoint(c))
+
+#############################################
+
+
+
 
